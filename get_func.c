@@ -22,6 +22,7 @@ void get_func(char *opcode, char *value, int line_number)
 		{"swap", _swap},
 		{"add", _add},
 		{"sub", _sub},
+		{"div", _div},
 		{NULL, NULL}
 	};
 
