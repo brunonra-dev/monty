@@ -34,7 +34,7 @@ void _div(stack_t **stack, unsigned int line_number)
 {
 	int div;
 
-	 if (!stack || !(*stack) || !((*stack)->next))
+	if (!stack || !(*stack) || !((*stack)->next))
 		monty_error(8, line_number, "div");
 
 	if ((*stack)->n == 0)
