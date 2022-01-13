@@ -82,12 +82,12 @@ void _pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
 
-	if (stack == NULL || *stack == NULL)
+	if (!stack || !(*stack))
 		monty_error(7, line_number);
 
 	tmp = *stack;
 	*stack = tmp->next;
-	if (*stack != NULL)
+	if (*stack)
 		(*stack)->prev = NULL;
 	free(tmp);
 }

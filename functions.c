@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _pall - print stack.
+ * _pall - prints all the values on the stack.
  *
  * @stack: Pointer to stack.
  * @line_number: line number.
@@ -24,7 +24,7 @@ void _pall(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * _pint - prints the top of the stack.
+ * _pint - prints the value at the top of the stack.
  *
  * @stack: Pointer to stack.
  * @line_number: line number.
@@ -39,7 +39,7 @@ void _pint(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * _nop - Does nothing
+ * _nop - doesn’t do anything.
  *
  * @stack: Pointer to stack
  * @line_number: line number.
@@ -52,7 +52,7 @@ void _nop(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * _swap - Swaps two elements of the stack.
+ * _swap - swaps the top two elements of the stack.
  *
  * @stack: Pointer to stack.
  * @line_number: Line number.
@@ -77,7 +77,7 @@ void _swap(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * _add - Adds elements.
+ * _add - adds the top two elements of the stack.
  *
  * @stack: Pointer to stack.
  * @line_number: line number.
@@ -85,14 +85,14 @@ void _swap(stack_t **stack, unsigned int line_number)
 
 void _add(stack_t **stack, unsigned int line_number)
 {
-	int sum;
+	int add;
 
 	if (!(stack) || !(*stack) || !((*stack)->next))
 		monty_error(8, line_number, "add");
 
 	(*stack) = (*stack)->next;
-	sum = (*stack)->n + (*stack)->prev->n;
-	(*stack)->n = sum;
+	add = (*stack)->n + (*stack)->prev->n;
+	(*stack)->n = add;
 
 	free((*stack)->prev);
 
