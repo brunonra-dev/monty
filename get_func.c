@@ -20,6 +20,7 @@ void get_func(char *opcode, char *value, int line_number)
 		{"pop", _pop},
 		{"nop", _nop},
 		{"swap", _swap},
+		{"add", _add},
 		{NULL, NULL}
 	};
 
